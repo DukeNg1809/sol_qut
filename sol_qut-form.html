@@ -1,0 +1,1349 @@
+﻿<html>
+<head>
+</head>
+<body onfocusout="parent.setEmailRange();" style="overflow-wrap: break-word;">
+    ﻿
+
+
+    <meta charset="utf-8">
+
+    <script src="ClientGlobalContext.js.aspx" type="text/javascript"></script>
+    <script src="../WebResources/sol_/scipts/APILIB.js"></script>
+    <script src="../WebResources/sol_/scipts/schoolapplication.js"></script>
+    <script src="../WebResources/sol_/scripts/print.min.js"></script>
+    <script src="../WebResources/sol_/libs/solultilities.js"></script>
+    <link href="../WebResources/sol_/css/qut-styles.css" rel="stylesheet">
+
+
+    <nav>
+        <button onclick="printHtml();">Print</button>
+        <button onclick="saveDataTemporay(applicationId, null);">Temporary Save</button>
+        <button onclick="submit2Admission(applicationId);">Submit</button>
+        <hr>
+    </nav>
+    <main id="printPart">
+        <header>
+            <!-- <img src="../webresources/sol_/images/griffith-col-logo.gif"> -->
+            <h1>Queensland University of Technology Application Form</h1>
+        </header>
+        <fieldset>
+            <legend>Program Selection</legend>
+            <h3>English Course</h3>
+            <div class="container">
+                <div class="left">Program:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Program Code:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Campus:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Intake:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <h3>Certificate IV Tertiary Preparation (Foundation)</h3>
+            <div class="container">
+                <div class="left">Program:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Program Code:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Campus:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Intake:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <h3>Diploma</h3>
+            <div class="container">
+                <div class="left">Program:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Program Code:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Campus:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Intake:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <h3>Associate Degree Program</h3>
+            <div class="container">
+                <div class="left">Program:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Program Code:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Campus:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+
+            </div>
+            <div class="container">
+                <div class="left">Intake:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+
+            <h3>Queensland University of Technology (This section must be completed, including desired major/specialisation, where relevant.)</h3>
+            <div class="container">
+                <div class="left">Program:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);" placeholder="(e.g. Bachelor of Commerce)"></div>
+            </div>
+            <div class="container">
+                <div class="left">Course Code:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);" placeholder="(please change to QUT four-letter course code)"></div>
+            </div>
+            <div class="container">
+                <div class="left">Campus:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);" placeholder="(e.g. Gardens Point)"></div>
+            </div>
+            <div class="container">
+                <div class="left">Intake:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Plan Code:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Plan Name/Major:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal detals</legend>
+            <div class="container">
+                <div class="left">Have you previously studied at Queensland University of Technology?</div>
+                <div class="right">
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Yes
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">No
+                </div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Please provide your student ID:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+
+            <div class="container">
+                <div class="left">Title:</div>
+                <div class="right">
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Mr
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Ms
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Mrs
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Dr
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Prof
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Miss
+                </div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Family name:</div>
+                <div class="right">
+                    <input id="txtlastname" type="text" disabled="disabled">As per your passport or identity document
+                </div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Given name/s:</div>
+                <div class="right"><input id="txtfirstname" type="text" disabled="disabled">As per your passport or identity document</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Middle name/s:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Prefered name/s:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Date of Birth:</div>
+                <div class="right"><input type="text" id="dateofbirth" disabled="disabled" placeholder="DD/MM/YYYY"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Gender:</div>
+                <div class="right">
+                    <input name="gender" type="radio" id="chkMale">Male
+                    <input name="gender" type="radio" id="chkFemale">Female
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Indeterminate/Intersex
+                </div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">In which country are you currently residing?</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">State:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">City:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Do you have a disability, impairment or long-term medical condition which may affect your studies?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Please specify:</div>
+                <div class="right">
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Hearing<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Vision<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Mobility<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Medical<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Learning<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Other
+                </div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Would you like to receive advice on support services, equipment and facilities that may assist you?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Citizenship Information</legend>
+
+            <div class="container">
+                <div class="left">Please indicate your citizenship status:</div>
+                <div class="right">
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Australian Citizen<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Permanent Australian Resident<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Permanent Australian Humanitarian Visa<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">New Zealand Citizen<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">None of the above<br>
+                    Please note that you will need to provide evidence of citizenship or residency at or before enrolment.
+                </div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Country of Citizenship:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);">As per your passport</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Country of Birth:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">What is the main language spoken in your home?</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Do you have a passport?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Passport number</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Passport expiry date</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Do you have a current Australian Visa?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, type of visa:</div>
+                <div class="right">
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Student<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Visitor<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Tourist<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Working Holiday<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Other
+                </div>
+            </div>
+            <div class="container">
+                <div class="left">Have you ever been refused a visa, had your visa cancelled or overstayed your visa in any country?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, what country:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Contact Details</legend>
+            <div class="container">
+                <div class="left">Email address:</div>
+                <div class="right"><input disabled="disabled" id="txtemail" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <h3>Mobile Telephone Number</h3>
+            <div class="container">
+                <div class="left">Mobile number:</div>
+                <div class="right"><input id="txtmobilephone" disabled="disabled" onchange="htmlElementClick(this.id);">Please type numbers only</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <h3>Home Telephone Number</h3>
+            <div class="container">
+                <div class="left">Home Number</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);">Please type numbers only</div>
+            </div>
+            <div class="container">
+                <div class="left">Skype</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Wechat:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <h3>Current address</h3>
+            <div class="container">
+                <div class="left">Building:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);">Building or property name</div>
+            </div>
+            <div class="container">
+                <div class="left">Unit:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);">Flat or unit details</div>
+            </div>
+            <div class="container">
+                <div class="left">Street Number:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Street:</div>
+                <div class="right"><input type="text" placeholder="Street" id="txtoverseastreet">Name of street</div>
+            </div>
+            <div class="container">
+                <div class="left">Country:</div>
+                <div class="right"><input id="txtcountryofBirth" disabled="disabled" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">State/Province:</div>
+                <div class="right"><input type="text" placeholder="State/Province" id="txtoverseaProvince"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">City/Suburb/Town:</div>
+                <div class="right"><input type="text" placeholder="City" id="txtoverseacity"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Postcode/Zip:</div>
+                <div class="right"><input type="text" placeholder="Postal Code" id="txtoversiapostalcode"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Alternate postal address:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);">e.g. PO Box address</div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Previous Study</legend>
+            <div class="container">
+                <div class="left">Will you be applying to Queensland University of Technology as a mature age student?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">No<input type="checkbox" onclick="htmlElementClick(this.id);">Yes</div>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Have you completed study in the last 4 years?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">No<input type="checkbox" onclick="htmlElementClick(this.id);">Yes</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Have you ever been excluded or considered for exclusion, expelled or had your enrolment terminated by an Australian education provider?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Please provide more information:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <h3>Highest Secondary Qualification</h3>
+            <div class="container">
+                <div class="left">Name of qualification::</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Name of education provider:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Country of education provider:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Language of instruction:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Have you completed the above study?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Date of completion:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Will you be applying for exemptions (recognition to prior to learning)?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Have you ever been excluded or considered for exclusion, expelled or had your enrolment terminated by an Australian education provider?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Please provide more information:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <h3>Highest Post-Secondary Qualification 1</h3>
+            <div class="container">
+                <div class="left">Name of qualification::</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Name of education provider:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Country of education provider:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Language of instruction:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Have you completed the above study?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Date of completion:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Will you be applying for exemptions (recognition to prior to learning)?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+            </div>
+            <div class="container">
+                <div class="left">Have you ever been excluded or considered for exclusion, expelled or had your enrolment terminated by an Australian education provider?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Please provide more information:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <h3>Highest Post-Secondary Qualification 2</h3>
+            <div class="container">
+                <div class="left">Name of qualification::</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Name of education provider:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Country of education provider:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Language of instruction:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Have you completed the above study?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Date of completion:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Will you be applying for exemptions (recognition to prior to learning)?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+            </div>
+            <div class="container">
+                <div class="left">Have you ever been excluded or considered for exclusion, expelled or had your enrolment terminated by an Australian education provider?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Please provide more information:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <h3>Highest Post-Secondary Qualification 3</h3>
+            <div class="container">
+                <div class="left">Name of qualification::</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Name of education provider:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Country of education provider:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Language of instruction:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Have you completed the above study?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Date of completion:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">Will you be applying for exemptions (recognition to prior to learning)?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+            </div>
+            <div class="container">
+                <div class="left">Have you ever been excluded or considered for exclusion, expelled or had your enrolment terminated by an Australian education provider?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Please provide more information:</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>English proficiency</legend>
+            <h3>Admission is on the basis of meeting the applicable English language requirements for your course.</h3>
+            <div class="container">
+                <div class="left">What is your first language?</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+            </div>
+            <div class="container">
+                <div class="left">How do you intend on meeting the English Language requirement?</div>
+                <div class="right">
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I have undertaken an English proficiency test such as IELTS or equivalent<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I intend to undertake an English proficiency test such as IELTS or equivalent<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I have studied or am studying an English language course in Australia<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I have completed at least one year of study where English was the main language of instruction<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I don't require English Language
+                </div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Do you have any evidence of your English proficiency?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Work Experience</legend>
+            <div class="container">
+                <div class="left">Do you have any relevant work or employment experience that is relevant to the course you are applying for? </div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Credit For Previous Study</legend>
+            <h3>Do you wish to be considered for credit exemption on the basis of your prior tertiary study?</h3>
+            <div class="container">
+                <div class="left">(Please refer to our website www.qut.edu.au/study/switching-to-qut)</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <h3>If your previous qualification is not listed, please supply detailed course outlines in English</h3>
+        </fieldset>
+
+        <fieldset>
+            <legend>Financial Information</legend>
+            <div class="container">
+                <div class="left">Will your fees be sponsored by a third party? Please note you will be required to provide evidence of your sponsorship when accepting your offer.</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left"><mark>If Yes</mark>, Name of sponsor</div>
+                <div class="right">
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Saudi Arabian Cultural Mission<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Cnpq Brazil Conselho Nacional De Desenvolvimento Cien E Te<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Embassy Of The Republic Of Iraq Cultural Attache<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Embassy Of The State Of Kuwait<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Libyan People'S Bureau Culture Section<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Consulate General Of Sultanate Of Oman<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Embassy Of The United Arab Emirate Police Attache Melbourne<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Saudi Aramco
+                </div>
+                <span class="mandatory">⊛</span>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Overseas Student Health Cover (OSHC)</legend>
+            <div class="container">
+                <div class="left">It is a requirement of the Australian Government that you maintain Overseas Student Health Cover (OSHC) for the duration of your student visa. Please choose one of the following options:</div>
+                <div class="right">
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">Please arrange Visa Length OSHC<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I am already in Australia and have an existing Overseas Student Health Cover Policy<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I am organising my own OSHC<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I do not have or require a student visa and do not require OSHC<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">My sponsor will arrange my OSHC on my behalf<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I am a Norwegian student covered by the National Norwegian Insurance Scheme<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I am a Swedish student covered by CSN International<br>
+                    <input type="checkbox" onclick="htmlElementClick(this.id);">I am a Belgian student covered by the Belgian Government Insurance Scheme<br>
+                </div>
+                <span class="mandatory">⊛</span>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Accommodation And Arrival Services</legend>
+            <div class="container">
+                <div class="left">Would you like us to arrange homestay accommodation and airport reception for you?</div>
+                <div class="right"><input type="checkbox" onclick="htmlElementClick(this.id);">Yes<input type="checkbox" onclick="htmlElementClick(this.id);">No<br>Additional fees apply</div>
+                <span class="mandatory">⊛</span>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Parent/Legal Guardian Details</legend>
+            <h3>Are you under 18 years of age?</h3>
+            <div class="container">
+                <div class="left">Are you under 18 years of age?</div>
+                <div class="right"><input type="checkbox">Yes<input type="checkbox">No</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <h3><mark>If Yes</mark>, Provide information</h3>
+            <div class="container">
+                <div class="left">Relationship</div>
+                <div class="right"><input type="checkbox">Parent<input type="checkbox">Legal Guardian</div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Family Name</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Given Name</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Email Address</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+            <div class="container">
+                <div class="left">Preferred Contact Number</div>
+                <div class="right"><input type="text" onchange="htmlElementClick(this.id);"></div>
+                <span class="mandatory">⊛</span>
+            </div>
+        </fieldset>
+
+    </main>
+
+    <script type="text/javascript">
+
+        var studentId = null;
+        var schoolId = null;
+        var applicationStatus = null;
+        var applicationId = null;
+        var context = null;
+        var headerTitle = null;
+        var tmpDate = null;
+        var objData = [];
+
+        /**
+         * Anthony: when form loaded, will do:
+         * 1. Load personal detail information from Dynamic 365
+         *
+         * */
+        document.onreadystatechange = function () {
+            //debugger;
+            context = Xrm.Page.context;
+            if (document.readyState == "complete") {
+
+
+                setInputTagName();
+                //Query studentid, and application status from CRM form
+                getDataParam(
+                    /*
+                     * Call back function
+                     * @x: StudentId from CRM
+                     * @y: School Id from CRM
+                     * @z: ApplicationId from CRM
+                    */
+                    function (x, o, z) {
+
+                        //debugger;
+                        studentId = x;
+                        schoolId = o;
+                        applicationId = z;
+
+                        //
+                        loadInfoStudent
+                            (
+                                studentId
+                                , context
+                                , function (data) {
+
+                                    //debugger;
+                                    if (data != null && data.length > 0)
+                                        bindDataAndSetTitle(data);
+                                    var context = Xrm.Page.context;
+
+                                    var context = Xrm.Page.context;
+                                    loadTemporaryData(applicationId, context);
+                                });
+                    });
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        /**
+        * Loading student information from CRM From
+        * Version 1: Only support for QAT school
+        *
+        * @studentId
+        * @formContext
+        * @callback
+        */
+        function loadInfoStudent(studentId, formContext, callback) {
+
+            var data = null;
+            var fetchXml = [
+                "<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>",
+                "  <entity name='contact'>",
+                "    <attribute name='fullname' />",
+                "    <attribute name='firstname' />",
+                "    <attribute name='lastname' />",
+                "    <attribute name='emailaddress1' />",
+                "    <attribute name='fus_soleduid' />",
+                "    <attribute name='gendercode' />",
+                "    <attribute name='fus_locationsstatus' />",
+                "    <attribute name='fus_type' />",
+                "    <attribute name='ownerid' />",
+                "    <attribute name='birthdate' />",
+                "    <attribute name='fus_nationalityid' />", //sol_localarea
+                "    <attribute name='sol_localarea' />",
+                "    <attribute name='contactid' />",
+                "    <attribute name='address1_postalcode' />",
+                "    <attribute name='address1_stateorprovince' />",
+                "    <attribute name='address1_city' />",
+                "    <attribute name='address1_line1' />",
+                "    <attribute name='address1_line2' />",//address2_line2
+                "    <attribute name='address2_line2' />",//address2_line2 statuscode
+                "    <attribute name='fus_overseasaddresscountry' />",
+                "    <attribute name='fus_overseasaddresscountry' />",
+                "    <attribute name='mobilephone' />",
+                "    <attribute name='sol_counsellorresponsible' />",
+                "    <attribute name='fus_additionalmobile' />",
+                "    <attribute name='fus_countryofbirthid' />",
+                "    <attribute name='fus_currentvisatype' />",
+                "    <attribute name='fus_visaexpirydate' />",
+                "    <attribute name='fus_currentvisasubclassid' />",
+                "    <attribute name='fus_visaexpiryreminder' />",
+                "    <attribute name='fus_currentvisaexpirydate' />",
+                "    <attribute name='adx_identity_passwordhash' />",
+                "    <attribute name='fus_passportexpirydate' />",
+                "    <attribute name='fus_passportnumber' />",
+                "    <attribute name='statuscode' />",
+                "   <attribute name='address1_composite' />",
+                "   <attribute name='address2_composite' />",
+                "    <order attribute='fus_soleduid' descending='false' />",
+                "    <filter type='and'>",
+                "      <condition attribute='contactid' operator='eq' value='", studentId/*{75629E2C-A8C4-E911-A89A-000D3A6A0058}*/, "'/>",
+                "    </filter>",
+                "  </entity>",
+                "</fetch>",
+            ].join("");
+
+            SOLEdu.WebApiOperation.executeFetchXml("contact", fetchXml
+                , function successCallback(results) {
+                    // Reset data
+                    //outModel.NewOpportunity = 0;
+                    if (results != null && results.length > 0) {
+
+                        data = results;
+                    }
+                }
+                , function errorCallback(error) {
+                    throw error;
+                }
+                , function onCompleted() {
+
+                    if (callback != null) {
+
+                        callback(data);
+                    }
+                }, false);
+
+
+        }
+
+        function printHtml() {
+
+            //debugger;
+            //var controls = document.getElementsByClassName('horizontal-group');//controls[0].style.display = 'None'
+            //expandAllDiv();
+            //controls.forEach(control => control..style.display = 'block');
+
+            /*Anthony:
+            * ---Call Method To Print pdf file
+            * Before call print, it to change title to set filename as template:
+            * SOlStudentId_Nationality_BirthDate
+            */
+            printJS
+                (
+                    {
+                        printable: 'printPart', //formData
+                        type: 'html'
+                        //,header: 'SOL Edu'
+                        , targetStyles: ['*']
+                    }
+                );
+
+        }
+
+        function bindDataAndSetTitle(data) {
+
+            var strTitle = '';
+            if (data.length > 0) {
+
+                var locationValue = null;
+                //STEP 1: Get fus_locationsstatus value
+                if (data[0].hasOwnProperty('fus_locationsstatus')) {
+                    locationValue = data[0].fus_locationsstatus;
+                }
+
+                data[0].hasOwnProperty("firstname") == true ? document.getElementById('txtfirstname').value = data[0].firstname : '';
+                data[0].hasOwnProperty("lastname") == true ? document.getElementById('txtlastname').value = data[0].lastname.toUpperCase() : '';
+                data[0].hasOwnProperty("mobilephone") == true ? document.getElementById('txtmobilephone').value = data[0].mobilephone : '';
+                //txtmobilephone
+                data[0].hasOwnProperty("emailaddress1") == true ? document.getElementById('txtemail').value = data[0].emailaddress1 : '';
+                data[0].hasOwnProperty("birthdate") == true ? document.getElementById('dateofbirth').value = data[0].birthdate : ''; //["birthdate@OData.Community.Display.V1.FormattedValue:"] : '';
+                data[0].hasOwnProperty("fus_passportnumber") == true ? document.getElementById('txtpassportnumber').value = data[0].fus_passportnumber : '';
+                data[0].hasOwnProperty("_fus_nationalityid_value") == true ? document.getElementById('txtcountryofBirth').value = data[0]["_fus_countryofbirthid_value@OData.Community.Display.V1.FormattedValue"] : '';
+                //txtcountryofpassport
+                data[0].hasOwnProperty("fus_passportexpirydate") == true ? document.getElementById('passportexpireddate').value = data[0].fus_passportexpirydate : '';
+                //txtcountryofCitizenship
+                //data[0].hasOwnProperty("_fus_nationalityid_value") == true ? document.getElementById('txtcountryofCitizenship').value = data[0]["_fus_nationalityid_value@OData.Community.Display.V1.FormattedValue"] : '';
+
+                //OFFSHORE
+                if (locationValue == 969760001) {
+
+                    //---STREET---
+                    data[0].hasOwnProperty("address1_line2") == true ? document.getElementById('txtoverseastreet').value = data[0].address1_line2 : '';
+                    //---CITY---
+                    data[0].hasOwnProperty("address1_city") == true ? document.getElementById('txtoverseacity').value = data[0].address1_city : '';
+                    //--PROVINCE
+                    data[0].hasOwnProperty("address1_stateorprovince") == true ? document.getElementById('txtoverseaProvince').value = data[0].address1_stateorprovince : '';
+                    //POSTAL CODE
+                    data[0].hasOwnProperty("address1_postalcode") == true ? document.getElementById('txtoversiapostalcode').value = data[0].address1_postalcode : '';
+
+                    //data[0].hasOwnProperty("_fus_nationalityid_value") == true ? document.getElementById('txtoversearcountry').value = data[0]["_fus_countryofbirthid_value@OData.Community.Display.V1.FormattedValue"] : '';
+                }
+                //ONSHORE
+                else {
+
+                    //---STREET---
+                    data[0].hasOwnProperty("address2_line1") == true ? document.getElementById('txtoverseastreet').value = data[0].address2_line1 : '';
+                    //---CITY---
+                    data[0].hasOwnProperty("address2_city") == true ? document.getElementById('txtoverseacity').value = data[0].address2_city : '';
+                    //--PROVINCE
+                    data[0].hasOwnProperty("_sol_localarea_value") == true ? document.getElementById('txtoverseaProvince').value = data[0]["_sol_localarea_value@OData.Community.Display.V1.FormattedValue"] : '';
+                    //POSTAL CODE
+                    data[0].hasOwnProperty("address2_postalcode") == true ? document.getElementById('txtoversiapostalcode').value = data[0].address2_postalcode : '';
+
+                    document.getElementById('txtoversearcountry').value = "Australia";
+                }
+
+
+                //address1_line1 - Full Oversea Address
+
+                //address2_line1 - Full Australian Address
+                //data[0].hasOwnProperty("address2_line1") == true ? document.getElementById('txtaustralianaddress').value = data[0].address2_line1 : '';
+                //sol_localarea
+                //data[0].hasOwnProperty("_sol_localarea_value") == true ? document.getElementById('txtsuburd').value = data[0]["_sol_localarea_value@OData.Community.Display.V1.FormattedValue"] : '';
+                //address2_postalcode - Australia
+                //data[0].hasOwnProperty("address2_postalcode") == true ? document.getElementById('txtauspostalcode').value = data[0].address2_postalcode : '';
+                //address1_postalcode
+                //data[0].hasOwnProperty("address1_postalcode") == true ? document.getElementById('txtoversiapostalcode').value = data[0].address2_postalcode : '';
+                //address2_city Austrlian City
+                //data[0].hasOwnProperty("address2_city") == true ? document.getElementById('txtauscity').value = data[0].address2_city : '';
+
+
+                if (data[0].hasOwnProperty("gendercode")) {
+
+                    var genderValue = data[0].gendercode; //100000000
+                    if (genderValue == 100000000 || genderValue == 100000001) {
+
+                        document.getElementById('chkMale').checked = false;
+                        document.getElementById('chkFemale').checked = true;;
+                        //FEMALE
+                    } else {
+
+                        document.getElementById('chkFemale').checked = false;
+                        document.getElementById('chkMale').checked = true;
+
+
+                    }
+                }
+                /*------------Giving warning for approval status------------------------*/
+                if (data[0].hasOwnProperty("statuscode")) {
+
+                    if (applicationId != null) {
+
+                        Xrm.WebApi.retrieveRecord("fus_application", applicationId.replace('{', '').replace('}', ''), "?$select=statuscode").then(
+
+                            function success(result) {
+
+                                if (result.hasOwnProperty('statuscode')) {
+
+                                    // perform operations on record retrieval
+                                    var statusCodeValue = result.statuscode;
+                                    applicationStatus = statusCodeValue;
+
+
+                                    if (statusCodeValue == 969760023) {
+                                        document.getElementById('lblNotice').style.display = 'block';
+                                        document.getElementById('lblNotice').style.background = 'black';
+                                        document.getElementById('lblNotice').style.width = '100%';
+                                    }
+
+                                }
+
+                            },
+
+                            function (error) {
+                                console.log(error.message);
+                                // handle error conditions
+                            }
+                        );
+                    }
+
+                }
+                /*------------End Giving warning for approval status-------------------*/
+            }
+
+        }
+
+        function setInputTagName() {
+
+            var controls = document.getElementsByTagName('input');
+            var i = 0;
+
+            for (var j = 0; j < controls.length; j++) {
+
+                var control = controls[j];
+
+                if (control.id == null || control.id == undefined || control.id == "") {
+
+                    //SET ID for input tax
+                    var name = control.type + '_' + i.toString();
+                    control.id = name;
+
+                    i++;
+                }
+            }
+        }
+
+        /**
+* Add event id attriute for input html tag
+* Version 1: Only support for QAT school
+*
+* @x
+*/
+        function htmlElementClick(x) {
+
+            var element = document.getElementById(x);
+            var type = element.type;
+
+            debugger;
+            switch (type) {
+
+                case 'checkbox':
+                case 'radio':
+
+                    var value = element.checked;
+
+                    if (objData.length == 0) {
+
+                        objData.push({
+
+                            name: x,
+                            value: element.checked
+                        });
+
+                    } else {
+
+                        isUpdatedDate(x, value, objData);
+                    }
+                    break;
+
+                case 'text':
+                case 'select':
+                case 'date':
+                    var value = element.value;
+
+                    if (objData.length == 0) {
+
+                        objData.push({
+
+                            name: x,
+                            value: element.checked
+                        });
+
+                    } else {
+
+                        isUpdatedDate(x, value, objData);
+                    }
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        /**
+       * Check data updated for tmp memory or not
+       * Version 1: Only support for QAT school
+       *
+       * @x
+       * @y
+       * @data
+       */
+        function isUpdatedDate(x, y, data) {
+
+            var isFound = false;
+            for (var i = 0; i < objData.length; i++) {
+
+                if (data[i]['name'] == x) {
+
+                    data[i]['value'] = y;
+                    isFound = true;
+
+                    break;
+                }
+            }
+
+            if (isFound == false) {
+
+                objData.push({
+
+                    name: x,
+                    value: y
+                });
+            }
+        }
+
+
+        /**
+       * Check data updated for tmp memory or not
+       * Version 1: Only support for QAT school
+       *
+       * @id
+       * @formContext
+                */
+        function loadTemporaryData(id, formContext) {
+
+            /*------------Define form context------------------*/
+            /*
+                *
+                * /api/data/v9.1/fus_applications(00000000-0000-0000-0000-000000000000)?$select=sol_temporarydata
+                *
+            */
+            if (formContext == undefined || formContext == null)
+                formContext = Xrm.Page.context;
+
+            var recordUri = SOLEdu.WebApiOperation.buildEntityUri(id, 'fus_application');
+
+            id = id.replace('{', '').replace('}', '');
+
+            //retrieveRecord
+            SOLEdu.WebApiOperation.retrieveRecord(id, 'fus_application', 'sol_temporarydata'
+                , null
+                , function success(results) {
+                    debugger;
+
+                    if (results != undefined && results != null) {
+
+                        if (results.sol_temporarydata != null && results.sol_temporarydata != '') {
+
+                            var pdfData = JSON.parse(results.sol_temporarydata);
+                            objData = pdfData;
+
+                            if (pdfData.length > 0) {
+
+                                for (var i = 0; i < pdfData.length; i++) {
+
+                                    var el = document.getElementById(pdfData[i]['name']);
+
+
+                                    if (el != null && el != undefined) {
+
+                                        var elType = el.type;
+
+                                        switch (elType) {
+
+                                            case 'checkbox':
+                                            case 'radio':
+
+                                                el.checked = pdfData[i]['value'];
+                                                break;
+
+                                            case 'text':
+                                            case 'select':
+                                            case 'date':
+
+                                                el.value = pdfData[i]['value'];
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                , function error(error) {
+
+                }, null);
+        }
+
+        function saveDataTemporay(id, name) {
+
+            debugger;
+            id = id.replace('{', '').replace('}', '');
+
+            isSubmitedToAdmission(id, function (data) {
+
+                if (data.length > 0) {
+
+                    if (objData.length > 0) {
+
+                        var obj = {};
+
+                        obj.sol_temporarydata = JSON.stringify(objData);
+
+                        SOLEdu.WebApiOperation.updateRecord(id, obj, 'fus_application'
+                            , function success() {
+
+                                //debugger;
+                                //alert("Draft QAT Application Form has been saved successfully!");
+                                Xrm.Utility.alertDialog("Draft UQ Application Form has been saved successfully!");
+
+                                console.log('Save Data');
+
+                            }
+                            , function error(error) {
+
+                                //debugger;
+                                throw error;
+
+                            });
+                    }
+
+                } else {
+
+
+                    if (applicationStatus == 969760023) {
+
+                        Xrm.Utility.alertDialog("You cannot modify sumitted application. Please contact Admission team for further information!");
+                    }
+                    else {
+
+                        if (objData.length > 0) {
+
+                            var obj = {};
+
+                            obj.sol_temporarydata = JSON.stringify(objData);
+
+                            SOLEdu.WebApiOperation.updateRecord(id, obj, 'fus_application'
+                                , function success() {
+
+                                    debugger;
+                                    //alert("Draft QAT Application Form has been saved successfully!");
+                                    Xrm.Utility.alertDialog("Draft UQ Application Form has been saved successfully!");
+
+                                    console.log('Save Data');
+
+                                }
+                                , function error(error) {
+
+                                    debugger;
+                                    throw error;
+
+                                });
+                        }
+
+                    }
+                }
+
+            });
+        }
+
+        function submit2Admission(applicationId) {
+
+            debugger;
+            if (applicationId != null && applicationId != undefined) {
+
+                //fus_statusdetail_fus_application_StatusDetails"
+                //fus_statusdetails@odata.bind
+                applicationId = applicationId.replace('{', '').replace('}', '');
+
+                /**-----------------EDIT LATER--------------*/
+                //var isSumited = isSubmitedToAdmission(applicationId);
+                //if (isSumited == true) {
+
+                //    Xrm.Utility.alertDialog("This application form has been submited to admission!"
+                //        , function () { return; }
+                //    );
+                //}
+                /**----------EDIT LATER---------------*/
+                if (applicationStatus == 969760023) {
+
+                    Xrm.Utility.alertDialog("You cannot sumitted application because it has been submited before. Please contact Admission team for further information!");
+                    return;
+                }
+
+                var entity = {};
+                //entity["fus_StatusDetails@odata.bind"] = "/fus_statusdetails(f9f3ee27-898d-e911-a888-000d3a6a0c1d)"; //fus_statusdetails@odata.bind
+                //969760023 - Submited to Admission team
+                entity["statuscode"] = 969760023;
+
+
+                //fus_statusdetail_fus_application_StatusDetails"
+                SOLEdu.WebApiOperation.updateRecord(applicationId, entity, 'fus_application'
+
+                    , function success() {
+
+                        debugger;
+                        applicationStatus == 969760023;
+                        Xrm.Utility.alertDialog("Application Form has been sumitted to Admission Team!");
+                        //Xrm.Page.data.refresh();
+                        //alert("Application Form has been sumitted to Admission Team!");
+                        //console.log('Save Data');
+
+                    }
+                    , function error(error) {
+
+                        debugger;
+                        throw error;
+
+                    });
+            }
+        }
+
+        function isSubmitedToAdmission(id, callback) {
+
+            //If Admission Roles login to system:
+            /**
+             * Can edit: return false.
+             * */
+            var roles = Xrm.Page.context.getUserRoles();
+            var fetchData = {
+
+                teamid: "{1C93FADA-B3B8-E911-A88D-000D3A6A0C1D}"
+            };
+            var fetchXml = ["<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='true'>",
+                "  <entity name='systemuser'>",
+                "    <attribute name='fullname' />",
+                "    <attribute name='businessunitid' />",
+                "    <attribute name='title' />",
+                "    <attribute name='address1_telephone1' />",
+                "    <attribute name='positionid' />",
+                "    <attribute name='systemuserid' />",
+                "    <order attribute='fullname' descending='false' />",
+                "    <filter type='and'>",
+                "      <condition attribute='systemuserid' operator='eq-userid' />",
+                "    </filter>",
+                "    <link-entity name='teammembership' from='systemuserid' to='systemuserid' visible='false' intersect='true'>",
+                "      <link-entity name='team' from='teamid' to='teamid' alias='ag'>",
+                "        <filter type='and'>",
+                "          <condition attribute='teamid' operator='eq' value='", fetchData.teamid/*{1C93FADA-B3B8-E911-A88D-000D3A6A0C1D}*/, "'/>",
+                "        </filter>",
+                "      </link-entity>",
+                "    </link-entity>",
+                "  </entity>",
+                "</fetch>",
+            ].join("");
+            var data = null;
+
+            SOLEdu.WebApiOperation.executeFetchXml("systemuser", fetchXml
+                , function success(results) {
+
+                    data = results;
+                }
+                , function error(error) {
+                }
+                , function oncomplete() {
+
+                    callback(data);
+                }
+                , false);
+
+
+            return false;
+        }
+    </script>
+
+
+
+</body>
+</html>
